@@ -23,17 +23,17 @@ for (setType, originalPaths, basePath) in datasets:
     print(f'Building {setType} set')
 
     if not os.path.exists(basePath):
-            print(f'Building directory {basePath}')
-            os.makedirs(basePath)
+        print(f'Building directory {basePath}')
+        os.makedirs(basePath)
 
     for path in originalPaths:
-            file=path.split(os.path.sep)[-1]
-            label=file[-5:-4]
+        file=path.split(os.path.sep)[-1]
+        label=file[-5:-4]
 
-            labelPath=os.path.sep.join([basePath,label])
-            if not os.path.exists(labelPath):
-                    print(f'Building directory {labelPath}')
-                    os.makedirs(labelPath)
+        labelPath=os.path.sep.join([basePath,label])
+        if not os.path.exists(labelPath):
+                print(f'Building directory {labelPath}')
+                os.makedirs(labelPath)
 
-            newPath=os.path.sep.join([labelPath, file])
-            shutil.copy2(path, newPath)
+        newPath=os.path.sep.join([labelPath, file])
+        shutil.copy2(path, newPath)
