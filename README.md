@@ -58,15 +58,13 @@ Report:
 
 ### 📌 Deep Learning & Neural Networks
 - Built and trained a custom **Convolutional Neural Network (CNN)** for image classification.
-- Applied **Separable Convolution** layers for efficient computation and reduced overfitting.
 - Used **Batch Normalization** and **Dropout** to improve model generalization and stability.
 - Designed and implemented the CNN using **Keras** with a **TensorFlow backend**.
 
 ### 📌 Data Handling & Processing
-- Managed large-scale image datasets (275k+ images).
+- Managed large-scale image datasets (200k+ images).
 - Automated **dataset splitting** into training, validation, and test sets using Python scripting.
 - Applied **Image Augmentation** (rotation, shifting, flipping, zoom, shear) using Keras’ `ImageDataGenerator` to enhance training robustness.
-- Balanced class imbalance with **class weighting** during training.
 
 ### 📌 Model Training & Optimization
 - Trained the CNN using **Adagrad Optimizer** with a custom learning rate schedule.
