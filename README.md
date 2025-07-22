@@ -7,7 +7,7 @@ This project builds a Convolutional Neural Network (CNN) called **CancerNet** to
 ## 📚 Project Overview
 
 - **Problem**: Automatically detect Invasive Ductal Carcinoma (IDC) in microscopic breast tissue images.
-- **Solution**: Train a CNN (CancerNet) using Keras and TensorFlow to classify images as either IDC-positive (1) or IDC-negative (0).
+- **Solution**: Train a CNN (CancerNet) using Keras and TensorFlow to classify images as either positive (1) or negative (0).
 - **Dataset**: Dataset from [Kaggle](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images).
 
 ---
