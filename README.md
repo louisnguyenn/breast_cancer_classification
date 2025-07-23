@@ -10,6 +10,10 @@ This project builds a Convolutional Neural Network (CNN) called **CancerNet** to
 - **Solution**: Train a CNN (CancerNet) using Keras and TensorFlow to classify images as either positive (1) or negative (0).
 - **Dataset**: Dataset from [Kaggle](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images).
 
+<img src="commandline.png">
+<img src="weighted-averages.png">
+<img src="plot.png">
+
 ---
 
 ## 🚀 How the Project Works
