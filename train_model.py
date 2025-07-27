@@ -13,9 +13,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-NUM_EPOCHS = 40
-INIT_LR = 1e-2
-BS = 32
+# this function will train and evaluate our model
+
+NUM_EPOCHS = 40     # set inital values of number of epochs (tests)
+INIT_LR = 1e-2      # learning rate
+BS = 32             # batch size
 
 # load and process the data
 trainPaths = list(paths.list_images(config.TRAIN_PATH))
@@ -84,6 +86,7 @@ M = model.fit(
     epochs=NUM_EPOCHS
 )
 
+# from here we start to evaluate the model and find the accuracy
 print("Now evaluating the model")
 testGen.reset()
 pred_indices = model.predict(
@@ -100,10 +103,12 @@ accuracy = (cm[0,0] + cm[1,1]) / total
 specificity = cm[1,1] / (cm[1,0] + cm[1,1])
 sensitivity = cm[0,0] / (cm[0,0] + cm[0,1])
 print(cm)
+# here we compute the confusion matrix to get the accuracy, specificity, and sensitivity and display it
 print(f'Accuracy: {accuracy}')
 print(f'Specificity: {specificity}')
 print(f'Sensitivity: {sensitivity}')
 
+# here we plot the training loss and accuracy of the model
 N = NUM_EPOCHS
 plt.style.use("ggplot")
 plt.figure()

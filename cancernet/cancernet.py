@@ -1,6 +1,6 @@
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.models import Sequential          # we use sequential API and SeparableConv2D to implement depthwise convolutions
+from tensorflow.keras.layers import SeparableConv2D     # (width and height of the image, and its depth (number of colour channels in each image))
 from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import SeparableConv2D
 from tensorflow.keras.layers import MaxPooling2D
 from tensorflow.keras.layers import Activation
 from tensorflow.keras.layers import Flatten
@@ -8,8 +8,15 @@ from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Dense
 from tensorflow.keras import backend as K
 
+# this class/function will be responsbie for the model's deep learning of the breast cancer images
+# it analyzes complex patterns in each image and learns from them to detect breast cancer
+# this is called a CNN (convolutional neural network), where in deep learning the model will find patterns by analyzing thousands
+# of images, as opposed to machine learning where we manually train the model with images, deep learning analyzes and observes it on its own
+# by feeding it thousands of information. you can think of the CNN as like the human brain, where there are many networks feeding each other
+# information.
 class CancerNet:
     @staticmethod
+    # width and height of the image, depth of the colour channels, and number of class (0 or 1, negative or positive) which would be 2 in this case
     def build(width, height, depth, classes):
         model = Sequential()
         shape = (height, width, depth)
@@ -55,4 +62,5 @@ class CancerNet:
         model.add(Dense(classes))
         model.add(Activation("softmax"))
 
+        # return the model
         return model
